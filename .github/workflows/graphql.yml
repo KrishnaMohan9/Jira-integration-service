@@ -14,7 +14,6 @@ jobs:
         shell: bash
         run: |-
           curl -v -X POST https://devopsprodemo.atlassian.net/gateway/api/graphql \
-           --user "gannamraju.kmohan@gmail.com:ATATT3xFfGF0GDwJdA5E9HYyKSgR5Ut-V38OH4gDGHO5inYTyb7bMVZsUri-l_HRViuE002mDEZnGk9nH2b5WlZv5pKGC78wz9KAkCBAk3X8biMbdjZBiRzuox31UN0I2Z1Y7PYCEFfe4Slt8iTWc-b5aZjs4C4qAE3MqO0XLrrqbCtvwhDXfFI=B9B99F51" 
            -H "X-ExperimentalApi : AddRelatedWorkToVersion" \
            -H "content-type : application/json" \
            -d '{ "query":"mutation useAddGenericLinkRelatedWork_addRelatedWorkMutation {
