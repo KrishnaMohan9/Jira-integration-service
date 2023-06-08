@@ -16,6 +16,7 @@ jobs:
           curl -v -X POST https://devopsprodemo.atlassian.net/gateway/api/graphql \
            -H "X-ExperimentalApi : AddRelatedWorkToVersion" \
            -H "content-type : application/json" \
+           -H "content-type: application/x-www-form-urlencoded" \
            -d '{ "query":"mutation useAddGenericLinkRelatedWork_addRelatedWorkMutation {
            jira {
             addRelatedWorkToVersion(
