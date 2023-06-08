@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        query: jira_mutation.yaml
+        query: samples/jira.query.yaml
         owner: helaili
         name: github-graphql-action
         
