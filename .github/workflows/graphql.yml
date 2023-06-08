@@ -17,22 +17,14 @@ jobs:
            -H "X-ExperimentalApi : AddRelatedWorkToVersion" \
            -H "content-type : application/json" \
            -H "content-type: application/x-www-form-urlencoded" \
-           -d '{ "query":"mutation useAddGenericLinkRelatedWork_addRelatedWorkMutation {
-           jira {
-            addRelatedWorkToVersion(
-            input: { 
-               versionId: "ari:cloud:jira:37570433-08ae-464a-b8c0-9d28c52f048a:version/activation/6c468cdf-3fb8-4dae-a543-ead783a4d810/10000", 
-               relatedWorkId: "dde3d6ef-360b-4f97-a547-098ec319fc05", url: "https://www.w3.org/Addressing/URL/url-spec.txt", 
-               title: "Reports", 
-               category: "Testing"})
-            } 
-            {
-            success
-            errors 
-            {
-                message
-            }
-            }}}'
+           -d '{ "query":"mutation useAddGenericLinkRelatedWork_addRelatedWorkMutation{ jira { addRelatedWorkToVersion(input: {versionId: \"ari:cloud:jira:37570433-08ae-464a-b8c0-9d28c52f048a:version/activation/6c468cdf-3fb8-4dae-a543-ead783a4d810/10000\", relatedWorkId: \"dde3d6ef-360b-4f97-a547-098ec319fc05\", url: \"https://www.w3.org/Addressing/URL/url-spec.txt\", title: \"Reports\", category: \"Testing\"})}}
+             {
+              success
+              errors 
+             {
+              message
+             }
+           }}}'
 
     
 
