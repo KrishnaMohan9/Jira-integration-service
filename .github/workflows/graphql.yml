@@ -13,6 +13,7 @@ jobs:
       - name: Generate Test Coverage
         shell: bash
         run: |-
+             git config --global http.version HTTP/1.1
              curl -X POST https://devopsprodemo.atlassian.net/gateway/api/graphql \
              -H "content-type : application/json" \
              -d '{"operationName": "useAddGenericLinkRelatedWork_addRelatedWorkMutation",
