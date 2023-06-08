@@ -10,12 +10,18 @@ jobs:
   args-query:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        query: samples/jira.query.yaml
-        owner: helaili
-        name: github-graphql-action
-        
+      - name: Generate Test Coverage
+        shell: bash
+        run: |-
+           curl  https://devopsprodemo.atlassian.net/gateway/api/graphql -X POST --user 'gannamraju.kmohan@gmail.com:ATATT3xFfGF0GDwJdA5E9HYyKSgR5Ut-V38OH4gDGHO5inYTyb7bMVZsUri-l_HRViuE002mDEZnGk9nH2b5WlZv5pKGC78wz9KAkCBAk3X8biMbdjZBiRzuox31UN0I2Z1Y7PYCEFfe4Slt8iTWc-b5aZjs4C4qAE3MqO0XLrrqbCtvwhDXfFI=B9B99F51'\
+            --header 'X-ExperimentalApi : AddRelatedWorkToVersion'
+            --header 'Content-Type: application/json' \
+            -d "$(jq -c -n --arg query '
+             {
+               mutation useAddGenericLinkRelatedWork_addRelatedWorkMutation {  jira { addRelatedWorkToVersion( input: {versionId: "ari:cloud:jira:37570433-08ae-464a-b8c0-9d28c52f048a:version/activation/6c468cdf-3fb8-4dae-a543-ead783a4d810/10000", relatedWorkId: "241", url: "https://www.w3.org/Addressing/URL/url-spec.txt", title: "Scanreportresults", category: "Communications"} ) { success errors { message } } } }
+             }''{"query":$query}')"
+
+    
 
 
   
