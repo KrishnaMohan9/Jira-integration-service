@@ -17,7 +17,7 @@ jobs:
             --header 'X-ExperimentalApi: AddRelatedWorkToVersion' \
             --header 'Authorization: Basic Z2FubmFtcmFqdS5rbW9oYW5AZ21haWwuY29tOkFUQVRUM3hGZkdGMGo5RUNZREZXb3d6Q2dYZF9aYnJ6UkJGMk85Z2pWeDFxVlE2UmtLdjczWjlxcnNXT2NkUVpud0dFenh0N1VheHh6d0UtNXdDU3VSRmRZZXdGYTAtclNaS2RNLXdGNHZESlcyWWF3alZPazd1QVVscXFkQjdZMXR3QV9wN1lpRUxSczk4cWtxempxbE4wQXY1eFp2MlA1bXZuYXZJWUctRHJIR24tam5VVEN5VT0wNDk2QkZFRQ==' \
             --header 'Content-Type: application/json' \
-            --data-raw '{"query":"mutation jira {\n    jira {\n        addRelatedWorkToVersion(\n            input: {versionId: \"ari:cloud:jira:37570433-08ae-464a-b8c0-9d28c52f048a:version/activation/6c468cdf-3fb8-4dae-a543-ead783a4d810/10000\", relatedWorkId: \"12345\", url: \"https://www.w3.org/Addressing/URL/url-spec.txt\", title: \"Report\", category: \"Testing\"}\n) {\n success\n }\n }\n}\n","variables":{}}'
+            --data-raw '{"query":"mutation jira {\n jira {\n addRelatedWorkToVersion(\n input: {versionId: \"ari:cloud:jira:37570433-08ae-464a-b8c0-9d28c52f048a:version/activation/6c468cdf-3fb8-4dae-a543-ead783a4d810/10000\", relatedWorkId: \"12345\", url: \"https://www.w3.org/Addressing/URL/url-spec.txt\", title: \"Report\", category: \"Testing\"}\n) {\n success\n }\n }\n}\n","variables":{}}'
 
     
 
