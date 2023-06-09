@@ -22,4 +22,4 @@ jobs:
         id: update-major-tag
         uses: actions/publish-action@v0.1.0
         with:
-          source-tag: release/${{ env.TAG_NAME }}
+          source-tag: ${{ env.TAG_NAME }}
