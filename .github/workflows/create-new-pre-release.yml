@@ -30,7 +30,7 @@ jobs:
       - name: Version tag release in Jira
         uses: "KrishnaMohan9/Jira-integration-service@main"
         with:
-          jira-project-key: 'GI'
+          jira-project-key: 'MIC'
           jira-automation-webhook: ${{ secrets.JIRA_AUTOMATION_WEBHOOK }}
           build-version: release/v${{ env.VERSION }}
 
