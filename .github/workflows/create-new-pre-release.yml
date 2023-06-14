@@ -3,7 +3,7 @@ name: Create release tag in Jira
 on:
   push:
     branches:
-      - release 
+      - main
   workflow_dispatch:
 
 jobs:
@@ -15,22 +15,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 'Get Previous tag'
-        id: previoustag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-        with:
-          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
-      - name: 'Get next minor version'
-        id: semvers
-        uses: "WyriHaximus/github-action-next-semvers@v1"
-        with:
-          version: ${{ steps.previoustag.outputs.tag }}
-            
-            
-      #- name: Version tag release in Jira
-      #  uses: "KrishnaMohan9/Jira-integration-service@main"
+     # - name: 'Get Previous tag'
+      #  id: previoustag
+      #  uses: "WyriHaximus/github-action-get-previous-tag@v1"
       #  with:
-      #    jira-project-key: 'GI'
-      #    jira-automation-webhook: ${{ secrets.JIRA_AUTOMATION_WEBHOOK }}
-      #    build-version: ${{ steps.previoustag.outputs.tag }}
+      #    fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+     # - name: 'Get next minor version'
+     #   id: semvers
+     #   uses: "WyriHaximus/github-action-next-semvers@v1"
+     #   with:
+     #     version: ${{ steps.previoustag.outputs.tag }}
+            
+            
+      - name: Version tag release in Jira
+        uses: "KrishnaMohan9/Jira-integration-service@main"
+        with:
+          jira-project-key: 'GI'
+          jira-automation-webhook: ${{ secrets.JIRA_AUTOMATION_WEBHOOK }}
+          build-version: release/v${{ env.VERSION }}
 
