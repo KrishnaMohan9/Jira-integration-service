@@ -1,6 +1,6 @@
 #!/bin/sh
 
-content=$(curl --location ${{ secrets.RESTAPI }} \
+content=$(curl --location  ${RESTAPI} \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic Z2FubmFtcmFqdS5rbW9oYW5AZ21haWwuY29tOkFUQVRUM3hGZkdGMGo5RUNZREZXb3d6Q2dYZF9aYnJ6UkJGMk85Z2pWeDFxVlE2UmtLdjczWjlxcnNXT2NkUVpud0dFenh0N1VheHh6d0UtNXdDU3VSRmRZZXdGYTAtclNaS2RNLXdGNHZESlcyWWF3alZPazd1QVVscXFkQjdZMXR3QV9wN1lpRUxSczk4cWtxempxbE4wQXY1eFp2MlA1bXZuYXZJWUctRHJIR24tam5VVEN5VT0wNDk2QkZFRQ=='| jq -r '.values[].id')
 
