@@ -2,6 +2,9 @@ name: Graphql
 
 on:
   workflow_dispatch:
+
+env:
+ RESTAPI : ${{ secrets.RESTAPI }}
   
 
 jobs:
