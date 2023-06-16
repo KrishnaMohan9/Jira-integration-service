@@ -10,4 +10,4 @@ jobs:
       - name: Generate Test Coverage
         shell: bash
         run: |-
-            ./releasenotes.sh
+            ./.github/workflows/samples/jirarelease.sh
