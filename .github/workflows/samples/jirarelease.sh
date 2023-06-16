@@ -4,6 +4,8 @@ content=$(curl --location  $RESTAPI \
 --header 'Content-Type: application/json' \
 --header "Authorization: Basic $TOKEN"| jq -r '.values[].id')
 
+echo $content
+
 report="Sonar Report"
 testing="communication"
 
