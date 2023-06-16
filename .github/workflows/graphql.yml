@@ -7,7 +7,7 @@ env:
  RESTAPI : ${{ secrets.RESTAPI }}
  TOKEN: ${{ secrets.JIRA_TOKEN }}
  versionid: ${{ secrets.VERSIONID }}
- url: ${{ secerts.SONAR_URL }}
+ url: ${{ secrets.SONAR_URL }}
   
 
 jobs:
