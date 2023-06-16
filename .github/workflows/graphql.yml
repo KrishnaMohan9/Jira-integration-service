@@ -10,4 +10,5 @@ jobs:
       - name: Generate Test Coverage
         shell: bash
         run: |-
-            .github/workflows/samples/jirarelease.sh
+              chmod +x ./github/workflows/samples/jirarelease.sh
+              ./github/workflows/samples/jirarelease.sh
