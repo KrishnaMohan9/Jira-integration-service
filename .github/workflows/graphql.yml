@@ -13,8 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Generate Test Coverage
-        env:
-              RESTAPI : ${{ secrets.RESTAPI }}
         shell: bash
         run: |-
               chmod +x ./.github/workflows/samples/jirarelease.sh
