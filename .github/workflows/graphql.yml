@@ -7,6 +7,7 @@ jobs:
   args-query:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Generate Test Coverage
         shell: bash
         run: |-
