@@ -6,7 +6,7 @@ content=$(curl --location  $RESTAPI \
 
 echo $content
 
-report="Sonar Report"
+report="meda-customer-service-sonarreport"
 testing="communication"
 
 curl --location 'https://devopsprodemo.atlassian.net/gateway/api/graphql' \
