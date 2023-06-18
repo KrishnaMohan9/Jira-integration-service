@@ -6,8 +6,8 @@ content=$(curl --location  $RESTAPI \
 
 echo $content
 
-report="meda-customer-service-trivyreport"
-testing="customer-service"
+report="meda-verification-service-sonarreport"
+testing="verification-service"
 
 curl --location 'https://devopsprodemo.atlassian.net/gateway/api/graphql' \
 --header 'X-ExperimentalApi:  AddRelatedWorkToVersion' \
