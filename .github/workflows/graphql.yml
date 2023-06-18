@@ -8,6 +8,7 @@ env:
  TOKEN: ${{ secrets.JIRA_TOKEN }}
  versionid: ${{ secrets.VERSIONID }}
  url: ${{ secrets.SONAR_URL }}
+ buidnumber: ${{ github.run_number }}
   
 
 jobs:
