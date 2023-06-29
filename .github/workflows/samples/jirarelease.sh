@@ -3,7 +3,7 @@
 curl --location 'https://tmrcoral.atlassian.net/rest/api/2/project/10019/version?expand=issuesstatus&maxResults=25&orderBy=-sequence&startAt=0&status=unreleased' \
 --header 'Authorization: Basic a3Jpc2huYS5tLmdhbm5hbXJhanVAdG1yLnFsZC5nb3YuYXU6QVRBVFQzeEZmR0YwWEdmUUM4YmQydGI3dzRxbnVNOXFpZFRfLXM5WkhpMkQ5YUlJSTlNdjNwSi0wakpFN1Uyc25PNDQzMU1HT1BTZUFwYVpWZzVJZzNmNTQ2d1pYNWhuVzhZNUZRd3NGRUFfT29yOFh3QVVFTU5fYndfRzZiQk5BODA2Ml8tT2FEbDl6clNUMi0xOHc3Y1lETDh5WnFBMkQ0NHQ0a3dSRnFzSDFpM28zZWJJd1lFPUNFRUM0MDUy' | jq -r '.values[].name'
 
-branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::`
+branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 
 echo $branch
 
