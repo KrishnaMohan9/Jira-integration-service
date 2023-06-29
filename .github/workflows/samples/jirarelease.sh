@@ -9,7 +9,7 @@ branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 #echo $content
 #echo $branch
 
-output=`echo $content | grep '$branch'`
+output=$(echo $content | grep '$branch')
 
 echo $output
 
