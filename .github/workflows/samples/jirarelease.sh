@@ -6,8 +6,8 @@ content=$(curl --location 'https://tmrcoral.atlassian.net/rest/api/2/project/100
 
 branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 
-echo $content
-echo $branch
+#echo $content
+#echo $branch
 
 output=`echo $content | grep '$branch'`
 
