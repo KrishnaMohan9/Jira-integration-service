@@ -9,6 +9,11 @@ branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 echo $content
 echo $branch
 
+echo $content | grep '$branch' &> /dev/null
+if [ $? == 0 ]; then
+   echo "matched"
+fi
+
 #content=$(curl --location  $RESTAPI \
 #--header 'Content-Type: application/json' \
 #--header "Authorization: Basic $TOKEN"| jq -r '.values[].id')
