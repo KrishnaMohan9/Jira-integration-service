@@ -9,7 +9,9 @@ branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 echo $content
 echo $branch
 
-echo $content | grep '$branch' 
+output=`echo $content | grep '$branch'`
+
+echo $output
 
 #content=$(curl --location  $RESTAPI \
 #--header 'Content-Type: application/json' \
