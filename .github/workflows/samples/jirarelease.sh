@@ -15,7 +15,7 @@
 branch=`git branch --show-current | tr -d "[:space:]" | sed 's:.*/::'`
 content=$(curl --location  $RESTAPI \
 --header 'Content-Type: application/json' \
---header "Authorization: Basic $TOKEN"| jq -r '.values[].name' | grep $branch)
+--header "Authorization: Basic $TOKEN"| jq -r '.values[].name' | grep $branch | jq -r '.values[].id')
 
 #content=$(curl --location 'https://devopsprodemo.atlassian.net/rest/api/2/project/10000/version?expand=issuesstatus&maxResults=25&orderBy=-sequence&startAt=0&status=unreleased&status=unreleased' \
 #--header 'Authorization: Basic Z2FubmFtcmFqdS5rbW9oYW5AZ21haWwuY29tOkFUQVRUM3hGZkdGMGo5RUNZREZXb3d6Q2dYZF9aYnJ6UkJGMk85Z2pWeDFxVlE2UmtLdjczWjlxcnNXT2NkUVpud0dFenh0N1VheHh6d0UtNXdDU3VSRmRZZXdGYTAtclNaS2RNLXdGNHZESlcyWWF3alZPazd1QVVscXFkQjdZMXR3QV9wN1lpRUxSczk4cWtxempxbE4wQXY1eFp2MlA1bXZuYXZJWUctRHJIR24tam5VVEN5VT0wNDk2QkZFRQ=='| jq -r '.values[].name' | grep $branch)
