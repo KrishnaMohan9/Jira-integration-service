@@ -19,7 +19,7 @@ content=$(curl --location  $RESTAPI \
 
 echo $content
 
-versionid=$(curl --location  'https://devopsprodemo.atlassian.net/rest/api/2/project/10000/version?expand=issuesstatus&maxResults=25&orderBy=-sequence&startAt=0&status=unreleased&status=unreleased' \
+versionid=$(curl --location  "https://devopsprodemo.atlassian.net/rest/api/2/project/10000/version?expand=issuesstatus&maxResults=25&orderBy=-sequence&startAt=0&status=unreleasedquery=$content" \
 --header 'Content-Type: application/json' \
 --header "Authorization: Basic $TOKEN"| jq -r '.values[].id')
 
